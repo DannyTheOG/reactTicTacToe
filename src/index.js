@@ -5,12 +5,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TicTacToe from './components/ticTacToe';
 
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
 ReactDOM.render(
-    <TicTacToe />,
+  element,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+// function tick() {
+//   ReactDOM.render(
+//     <TicTacToe />,
+//   document.getElementById('root')
+//   );
+// }
+
+// setInterval(tick, 1000);
+
 reportWebVitals();

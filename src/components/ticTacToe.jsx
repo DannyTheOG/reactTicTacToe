@@ -1,14 +1,34 @@
-import {React,  Component } from "react";
+import React,  {Component} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class TicTacToe extends Component {
-     render(){
+     state = {
+          count: new Date().toLocaleTimeString(),
+     };
+
+     styles = {
+          fontSize: 20,
+          fontWeight: "bold"
+     };
+
+     // componentDidMount() {
+     //      setInterval(() => {
+     //           this.setState({count: new Date().toLocaleTimeString()});
+     //      }, 1000);
+     // }
+    
+     render() {
           return (
                <div>
-                    <h1>Happy Coding!</h1>
-                    <button>Retry</button>
+                    <span style={this.styles} className="m-2">{new Date().toLocaleTimeString()}</span>
+                    {/* <button className="btn btn-primary">Increment</button> */}
                </div>
           )
-     }
+     };
+
+     
 }
+
+
 
 export default TicTacToe;
